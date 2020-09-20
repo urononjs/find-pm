@@ -14,7 +14,6 @@ $(document).ready(function(){
 // END-PRODUCT
 
 
-
 // SLIDER
 jQuery("#carousel").owlCarousel({
     autoplay: false,
