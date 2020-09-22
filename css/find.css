@@ -19,15 +19,15 @@ body {
 
 /*HEADER*/
 .header{
-    background: black;
+    background-color: #391d46;
     text-align: right;
     padding: 10px 0 10px 0;
 }
 
 .header-link{
-    font-weight: normal;
-    font-size: 16px;
-    color: #FFFFFF;
+    color: #e6e8eb;
+    font-size: 12px;
+    font-weight: 300;
     list-style: none;
     outline: none;
     text-decoration: none;
@@ -37,8 +37,8 @@ body {
 
 /*INTRO*/
 .intro{
-    background: darkorange;
-    height: 600px;
+    background-color: #460d0c;
+    background-image: linear-gradient(-48deg, #fe8101 0%, #fab900 100%);
     text-align: right;
 }
 
@@ -49,8 +49,24 @@ body {
     justify-content: space-between;
 }
 
+.logo{
+    width: 240px;
+}
+
+.intro-tel{
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
 .intro-tel-wrap{
     text-align: right;
+}
+
+.tel-text{
+    color: #fffcfc;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .tel-text-mob{
@@ -59,51 +75,91 @@ body {
 }
 
 .phone{
-    color: #FFFFFF;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
     list-style: none;
     outline: none;
     text-decoration: none;
 }
 
 .intro-title{
-    font-weight: bold;
-    font-size: 56px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* black */
+    font-size: 64px;
     text-transform: uppercase;
     text-align: center;
 }
 
 .intro-subtitle{
+    font-size: 32px;
+    font-weight: 400;
     text-align: center;
 }
 
 .play-btn-wrap{
-    margin: 40px 0 20px 0;
-    border-radius: 5px;
+    margin: 10px 0 20px 0;
+    border-radius: 10px;
     padding: 5px;
-    background: #a200ec;
+    background: #957ADE;
     display: inline-block;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    position: absolute;
+    right: 0;
+    cursor: pointer;
 }
 
 .play-btn{
-    background: #a200ec;
-    border-radius: 5px;
-    border: 2px solid orangered;
-    padding: 10px 40px;
-    font-weight: bold;
-    font-size: 23px;
-    color: #fffb11;
+    /*background-image: linear-gradient(to top, #0a00b2 0%, #fc00ff 100%);*/
+    border-radius: 10px;
+    border: 2px solid #FD843E;
+    padding: 19px 13px 25px 13px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 33px;
+
+    color: #FCE452;
     text-transform: uppercase;
     display: inline-block;
+}
 
+.intro-kit-wrap{
+    text-align: center;
+    position: relative;
+}
+
+.intro-kit-img{
+    /*margin: 0 auto;*/
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.bag{
+    position: absolute;
+    top: 8%;
+    left: 28%;
+    max-width: 38%;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.bag:hover{
+    transform:scale(1.1);
 }
 /*END-INTRO*/
 
 
 /*REGISTRATION*/
 .registration{
-    height: 600px;
-    background: #333333;
-    padding: 20px 0 20px 0;
+    background: url("../images/registration-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+
+    padding: 30px 0 30px 0;
 }
 
 .registration .container{
@@ -116,25 +172,52 @@ body {
     width: 50%;
 }
 
+.clock-wrap{
+    background: #333333;
+    display: inline-block;
+    padding: 5px 20px 5px 20px;
+
+    border-radius:10px;
+    box-shadow:inset 0 -5px 0 rgba(166, 166, 166, 0.9);
+}
+
 .reg-month{
-    font-weight: 600;
-    font-size: 18px;
-    color: rgba(236, 232, 17, 0.87);
+    font-weight: 900;
+    font-size: 28px;
+    color: #FCE452;
+}
+
+.registration-title{
+    font-weight: 900;
+    font-size: 28px;
 }
 
 .registration-title-2{
-    font-weight: bold;
-    font-size: 46px;
+    font-weight: 900;
+    font-size: 65px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    position: relative;
+    display: inline-block;
+}
+
+.registration-title-2:before{
+    content: url("../images/coin.png");
+    position: absolute;
+    top: -31px;
+    right: -21px;
 }
 /*END-REGISTRATION*/
 
 /*TIMER*/
 #counter {
     text-align: center;
-    margin: 50px auto;
+    margin: 10px 5px 30px 5px;
     display: block;
+    color: #ffffff;
     font-size: 2em;
-    color: #282828;
+    font-weight: 400;
 }
 @media (max-width: 500px) {
     #counter {
@@ -152,7 +235,7 @@ body {
     text-rendering: optimizeLegibility;
     position: relative;
     background-color: #353535;
-    margin: 0 2px;
+    margin: 0 10px;
     padding: 5px;
     color: white;
     border-radius: 5px;
@@ -164,16 +247,16 @@ body {
     /*margin-right: 10px;*/
 }
 #counter span.days:before {
-    content: "DAYS";
+    content: "днiв";
 }
 #counter span.hours:before {
-    content: "HOUR";
+    content: "годин";
 }
 #counter span.minutes:before {
-    content: "MIN";
+    content: "хвилин";
 }
 #counter span.seconds:before {
-    content: "SEC";
+    content: "секунд";
 }
 #counter span:before {
     bottom: -20px;
@@ -182,9 +265,12 @@ body {
     left: 0;
     right: 0;
     display: block;
-    color: black;
-    font-size: 0.35em;
+    color: #fbfbfb;
+    font-size: 0.40em;
     text-shadow: none;
+
+    /*font-size: 15px;*/
+    font-weight: 400;
 }
 #counter span:after {
     content: "";
@@ -205,7 +291,7 @@ body {
 
 /*PRODUCT*/
 .product{
-    background: #c9c9c9;
+    background: #FAFAFA;
 }
 
 .product-wrap {
@@ -221,7 +307,7 @@ body {
 .prod-img {
     width: 100%;
     border-radius: 50%;
-    border: 1px solid #757575;
+
 }
 
 .prod-box-text {
@@ -230,20 +316,16 @@ body {
 }
 
 .prod-text {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    color: #FFFFFF;
+    color: #494949;
+    font-size: 18px;
+    font-weight: 700;
     text-align: center;
 }
 
 .prod-title {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
+    color: #494949;
     font-size: 32px;
-    color: #980303;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -302,22 +384,30 @@ body {
 
 .content_toggle{
     border-radius: 26px;
-    border: 1px solid dimgrey;
+    border: 1px solid #494949;
     padding: 5px 15px;
-    font-weight: bold;
+
+
+    color: #494949;
     font-size: 12px;
-    color: #717171;
+    font-weight: 700;
+
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     outline: none;
+    margin-top: 30px;
 }
 
 
 /*WINNERS*/
 .winners{
+    background: url("../images/winners-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     /*height: 600px;*/
-    background: #73421b;
+
     padding: 30px 0 50px 0;
 }
 
@@ -343,28 +433,32 @@ body {
     margin-top: 35px;
 }
 
-.card .card-header {
-    position: relative;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
+/*.card .card-header {*/
+/*    position: relative;*/
+/*    height: 48px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: flex-end;*/
 
-.card .card-header .profile-img {
-    width: 115px;
-    height: 115px;
-    border-radius: 1000px;
-    position: absolute;
-    left: 2%;
-    transform: translateY(-16px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-}
+/*    padding-right: 20px;*/
+/*}*/
+
+/*.card .card-header .profile-img {*/
+/*    width: 115px;*/
+/*    height: 115px;*/
+/*    border-radius: 1000px;*/
+/*    position: absolute;*/
+/*    left: 3%;*/
+/*    transform: translateY(-16px);*/
+/*    box-shadow: 0 0 20px rgba(0, 0, 0, .2);*/
+/*}*/
 
 .full-name {
-    font-size: 20px;
-    font-weight: 600;
     text-align: left;
+
+    color: #434343;
+    font-size: 27px;
+    font-weight: 700;
 }
 
 
@@ -372,10 +466,40 @@ body {
 .card-text{
     margin-top: 30px;
     text-align: left;
-    font-size: 13px;
-    color: black;
-    font-weight: 600;
+    /*font-size: 13px;*/
+    /*color: black;*/
+    /*font-weight: 600;*/
+
+    color: #434343;
+    font-size: 18px;
+    font-weight: 700;
 }
+
+
+
+
+
+
+.round{
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    background: url(../images/abramec-1.png) no-repeat 0 0;
+    background-size: auto 152px;
+
+    transform: translateY(-22px);
+
+    /*display: inline-block;*/
+}
+
+.card-header-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 96px;
+    padding-right: 60px;
+}
+
 /*END-CARDS*/
 
 
@@ -424,7 +548,7 @@ body {
 .owl-nav span {
     font-size: 70px;
     position: relative;
-    top: -5px;
+    /*top: -5px;*/
 }
 .owl-nav button:focus {
     outline: none;
@@ -447,7 +571,7 @@ body {
 /*FOOTER*/
 .footer{
     padding: 20px 0 20px 0;
-    background: #a200ec;
+    background: #8777DA;
 }
 
 .footer .container{
@@ -457,8 +581,12 @@ body {
 }
 
 .f-link{
-    color: #fffdfd;
+    color: #ffffff;
     text-transform: uppercase;
+
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: 300;
 }
 /*END-FOOTER*/
 
@@ -468,7 +596,12 @@ body {
 /*START-STYLES FOR MAX-WIDTH*/
 /*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {
-
+    .card-header-wrap {
+        padding-right: 10px;
+    }
+    .full-name {
+        font-size: 23px;
+    }
 }
 
 /*Medium devices (tablets, less than 992px)*/
@@ -490,13 +623,79 @@ body {
 
     .owl-slider{
         padding: 0 30px 0 30px;
+        margin: 10px 0 20px 0;
     }
+
+
+    /*new-cards-style*/
+    .name-wrap {
+        margin: 0 auto;
+        transform: translateY(-75px);
+    }
+    .full-name {
+        display: inline-block;
+        text-align: center;
+    }
+    .round {
+        display: inline-block;
+        transform: translateY(-85px);
+    }
+    .card {
+        margin-top: 70px;
+    }
+    .card-header-wrap {
+        display: block;
+        height: auto;
+    }
+    .card-text{
+        text-align: center;
+        margin-top: -70px;
+    }
+    /*end-new-cards-style*/
+
 }
 
 /*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
+
+    .intro-kit-wrap {
+        margin-top: 65px;
+    }
+    .play-btn-wrap {
+        top: -51px;
+    }
+    .bag{
+        max-width: 71%;
+        top: 12%;
+    }
+
     .footer .container {
         flex-direction: row-reverse;
+    }
+    .intro-title {
+        font-size: 46px;
+    }
+    .registration {
+        background: url(../images/registration-bg-mob.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 160px 0 20px 0;
+    }
+
+    .registration-title, .reg-month {
+        font-size: 20px;
+    }
+
+    .registration-title-2 {
+        font-size: 54px;
+    }
+
+    .clock-wrap{
+        padding: 5px 5px 5px 5px;
+    }
+
+    .form-group input {
+        font-size: 16px;
     }
 }
 
@@ -525,26 +724,105 @@ body {
         width: 90%;
     }
 
+    .logo {
+        width: auto;
+    }
+
 }
 
 /*Extra small devices (portrait phones, less than 480px)*/
 @media (max-width: 480px) {
+    .intro-title {
+        font-size: 46px;
+    }
+    .intro-subtitle {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .phone {
+        font-size: 21px;
+    }
+    .intro-tel {
+        font-size: 14px;
+    }
+    .play-btn-wrap {
+        text-align: center;
+        display: block;
+        width: 91%;
+        margin: 0 auto;
+
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .play-btn {
+        padding: 13px 9px 13px 9px;
+        font-size: 22px;
+        display: block;
+    }
+
+    .product-wrap {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .prod-text {
+        font-size: 12px;
+    }
+
+    .card-text {
+        text-align: center;
+        font-size: 14px;
+        margin-top: -70px;
+    }
+
+    .name-wrap {
+        transform: translateY(-75px);
+    }
+    .full-name {
+        text-align: center;
+        font-size: 18px;
+    }
 
 }
 
 /*Extra small devices (portrait phones, less than 450px)*/
 @media (max-width: 450px) {
+    .header {
+        text-align: left;
+    }
+    .prod-title {
+        font-size: 28px;
+    }
+    .f-link {
+        font-size: 14px;
+    }
 
+    input[type="checkbox"] + label {
+        font-size: 8px;
+    }
 }
 
 /*Extra small devices (portrait phones, less than 400px)*/
 @media (max-width: 400px) {
-
+    .intro-title {
+        font-size: 42px;
+    }
 }
 
 /*Extra small devices (portrait phones, less than 350px)*/
 @media (max-width: 350px) {
-
+    .intro-tel {
+        font-size: 13px;
+    }
+    .phone {
+        font-size: 18px;
+    }
+    .intro-title {
+        font-size: 37px;
+    }
+    .play-btn {
+        font-size: 20px;
+    }
 }
 /*END-STYLES FOR MAX-WIDTH*/
 

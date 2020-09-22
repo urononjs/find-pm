@@ -24,9 +24,9 @@
     color: #000000 !important;
     width: 100%;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .form-control {
@@ -46,32 +46,27 @@
 
 /*btn-form-style*/
 .btn-play-form{
-    color: #fffdfd;
+    color: #ffffff;
     cursor: pointer;
-    padding: 10px 40px;
+    padding: 15px 40px;
     width: 100%;
     text-align: center;
     margin-top: 10px;
-    background: #049E67;
-    border-radius: 3px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    /*color: #FFFFFF;*/
+    border-radius: 10px;
+    background-color: #470e0c;
+    background-image: linear-gradient(-8deg, #fe8101 0%, #fab900 100%);
+    box-shadow: 0px 0px 15px 0px #FAB900;
+
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: 700;
     border: none;
     outline: none;
 }
 
 .btn-play-form:hover{
-    background-color: #04bf7c;
-    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
-    -o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+    background-image: linear-gradient(-8deg, #fab900 0%, #fe8101 100%);
 }
 
 
@@ -83,11 +78,12 @@ input[type="checkbox"] + label {
     position: relative;
     padding-left: 35px;
     margin-bottom: 20px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+
+    font-family: Montserrat;
     font-size: 9px;
+    font-weight: 300;
     color: #ffffff;
+
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -118,8 +114,8 @@ input[type="checkbox"]:checked + label:before {
 .boxes input[type="checkbox"] + label:before {
     content: '';
     display: block;
-    width: 23px;
-    height: 23px;
+    width: 24px;
+    height: 24px;
     position: absolute;
     left: 0;
     top: 30%;
@@ -130,16 +126,19 @@ input[type="checkbox"]:checked + label:before {
     -o-transition: all .12s, border-color .08s;
     transition: all .12s, border-color .08s;
 
-    background: #252525;
+    background: transparent;
     /*border: 2px solid #FFCF2D;*/
     -webkit-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+    border-radius: 4px;
+    border: 1px solid #ffffff;
 }
 
 .boxes input[type="checkbox"]:checked + label:after {
     content: '';
     position: absolute;
-    left: 6px;
+    left: 8px;
     top: 30%;
     width: 5px;
     height: 11px;

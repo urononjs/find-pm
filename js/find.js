@@ -1,3 +1,12 @@
+// SCROLL TO FORM
+$(".play-btn-wrap").click(function (){
+    $('html, body').animate({
+        scrollTop: $(".registration").offset().top
+    }, 1000);
+});
+// END-SCROLL TO FORM
+
+
 // PRODUCT
 $(document).ready(function(){
     $('.content_toggle').click(function(){
