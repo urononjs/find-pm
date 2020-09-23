@@ -1,60 +1,3 @@
-// SCROLL TO FORM
-$(".play-btn-wrap").click(function (){
-    $('html, body').animate({
-        scrollTop: $(".registration").offset().top
-    }, 1000);
-});
-// END-SCROLL TO FORM
-
-
-// PRODUCT
-$(document).ready(function(){
-    $('.content_toggle').click(function(){
-        $('.content_block').slideToggle(300, function(){
-            if ($(this).is(':hidden')) {
-                $('.content_toggle').html('Показати ще');
-            } else {
-                $('.content_toggle').html('Скрыть');
-            }
-        });
-        return false;
-    });
-});
-// END-PRODUCT
-
-
-// SLIDER
-jQuery("#carousel").owlCarousel({
-    autoplay: false,
-    lazyLoad: true,
-    loop: true,
-    margin: 20,
-    responsiveClass: true,
-    autoHeight: true,
-    // autoplayTimeout: 7000,
-    // smartSpeed: 800,
-    nav: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-
-        600: {
-            items: 1
-        },
-
-        1024: {
-            items: 2
-        },
-
-        1366: {
-            items: 2
-        }
-    }
-});
-// END-SLIDER
-
-
 // TIMER
 //counts up or down depending on date entered in //format at the bottom
 
@@ -109,5 +52,71 @@ function counter(date) {
     timer = setInterval(count, 1000);
 }
 
-counter('09/30/2020 1:00:00 GMT-0400 (EDT)');
+counter('10/31/2020 1:00:00 GMT-0400 (EDT)');
 // END-TIMER
+
+
+// SCROLL TO FORM
+$(".play-btn-wrap, .bag").click(function (){
+    $('html, body').animate({
+        scrollTop: $(".registration").offset().top
+    }, 1000);
+});
+// END-SCROLL TO FORM
+
+
+// PRODUCT
+$(document).ready(function(){
+    $('.content_toggle').click(function(){
+        $('.content_block').slideToggle(300, function(){
+            if ($(this).is(':hidden')) {
+                $('.content_toggle').html('Показати ще');
+            } else {
+                $('.content_toggle').html('Скрыть');
+            }
+        });
+        return false;
+    });
+
+    setTimeout(function () {
+        $('.lens').addClass('lens-add-class');
+    },800);
+});
+// END-PRODUCT
+
+
+// SLIDER
+jQuery("#carousel").owlCarousel({
+    autoplay: false,
+    lazyLoad: true,
+    loop: true,
+    margin: 20,
+    responsiveClass: true,
+    autoHeight: true,
+    // autoplayTimeout: 7000,
+    // smartSpeed: 800,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+
+        600: {
+            items: 1
+        },
+
+        1024: {
+            items: 2
+        },
+
+        1366: {
+            items: 2
+        }
+    }
+});
+// END-SLIDER
+
+
+// ZOOM
+
+// END-ZOOM
