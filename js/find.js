@@ -1,6 +1,5 @@
 // TIMER
 //counts up or down depending on date entered in //format at the bottom
-
 function counter(date) {
     var theDate = new Date(date);
     var _second = 1000;
@@ -55,15 +54,13 @@ function counter(date) {
 counter('10/31/2020 1:00:00 GMT-0400 (EDT)');
 // END-TIMER
 
-
 // SCROLL TO FORM
-$(".play-btn-wrap, .bag").click(function (){
+$(".play-btn-wrap, .bag, .lens").click(function (){
     $('html, body').animate({
         scrollTop: $(".registration").offset().top
     }, 1000);
 });
 // END-SCROLL TO FORM
-
 
 // PRODUCT
 $(document).ready(function(){
@@ -72,7 +69,7 @@ $(document).ready(function(){
             if ($(this).is(':hidden')) {
                 $('.content_toggle').html('Показати ще');
             } else {
-                $('.content_toggle').html('Скрыть');
+                $('.content_toggle').html('Приховати');
             }
         });
         return false;
@@ -81,9 +78,14 @@ $(document).ready(function(){
     setTimeout(function () {
         $('.lens').addClass('lens-add-class');
     },800);
+
+    $(".lens").hover(function(){
+        $('.bag').addClass('lens-add-hover');
+    }, function(){
+        $( ".bag" ).removeClass( "lens-add-hover" );
+    });
 });
 // END-PRODUCT
-
 
 // SLIDER
 jQuery("#carousel").owlCarousel({
@@ -115,8 +117,3 @@ jQuery("#carousel").owlCarousel({
     }
 });
 // END-SLIDER
-
-
-// ZOOM
-
-// END-ZOOM

@@ -1,3 +1,6 @@
+.fancybox-content{
+    color: black;
+}
 
 .form-group{
     background: #FFFFFF;
@@ -25,7 +28,7 @@
     width: 100%;
 
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 300;
 }
 
@@ -48,27 +51,27 @@
 .btn-play-form{
     color: #ffffff;
     cursor: pointer;
-    padding: 15px 40px;
+    padding: 15px 13px;
     width: 100%;
     text-align: center;
     margin-top: 10px;
-
     border-radius: 10px;
     background-color: #470e0c;
+    background-image: -o-linear-gradient(98deg, #fe8101 0%, #fab900 100%);
     background-image: linear-gradient(-8deg, #fe8101 0%, #fab900 100%);
-    box-shadow: 0px 0px 15px 0px #FAB900;
-
+    -webkit-box-shadow: 0 0 15px 0 #FAB900;
+    box-shadow: 0 0 15px 0 #FAB900;
     font-family: Montserrat;
-    font-size: 19px;
+    font-size: 26px;
     font-weight: 700;
     border: none;
     outline: none;
 }
 
 .btn-play-form:hover{
+    background-image: -o-linear-gradient(98deg, #fab900 0%, #fe8101 100%);
     background-image: linear-gradient(-8deg, #fab900 0%, #fe8101 100%);
 }
-
 
 /*Checkboxes styles*/
 input[type="checkbox"] { display: none; }
@@ -78,12 +81,10 @@ input[type="checkbox"] + label {
     position: relative;
     padding-left: 35px;
     margin-bottom: 20px;
-
     font-family: Montserrat;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 300;
     color: #ffffff;
-
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -125,12 +126,9 @@ input[type="checkbox"]:checked + label:before {
     -webkit-transition: all .12s, border-color .08s;
     -o-transition: all .12s, border-color .08s;
     transition: all .12s, border-color .08s;
-
     background: transparent;
-    /*border: 2px solid #FFCF2D;*/
-    -webkit-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
-
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     border: 1px solid #ffffff;
 }
@@ -138,11 +136,11 @@ input[type="checkbox"]:checked + label:before {
 .boxes input[type="checkbox"]:checked + label:after {
     content: '';
     position: absolute;
-    left: 8px;
-    top: 30%;
-    width: 5px;
-    height: 11px;
-    border: 2px solid #ffffff;
+    left: 6px;
+    top: 31%;
+    width: 10px;
+    height: 16px;
+    border: 1px solid #ffffff;
     border-top-color: transparent;
     border-left-color: transparent;
     -webkit-transform-origin: right top;
